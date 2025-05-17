@@ -7,6 +7,7 @@ from flask import (Flask)
 
 # local application imports
 import backend.extensions as EXTENSIONS
+import backend.models as MODELS
 
 # load variables from .env file.
 # used override due to local bug parsing ":" as "\x3a" in .env values
