@@ -8,6 +8,7 @@ from flask import (Flask)
 # local application imports
 import backend.extensions as EXTENSIONS
 import backend.models as MODELS
+import backend.routes as ROUTES
 
 # load variables from .env file.
 # used override due to local bug parsing ":" as "\x3a" in .env values
@@ -50,6 +51,9 @@ def create_app(test_config=None):
     @app.route("/")
     def index():
         return "Hello Flask"
+
+    # register routes
+    app.register_blueprint(ROUTES.api_v1.api_v1_bp)
 
     return app
 
