@@ -5,10 +5,10 @@ from flask import Blueprint
 from backend.utilities.functions import formatResponse
 
 # Blueprint for API v1 routes
-api_v1_bp = Blueprint('api_v1', __name__, url_prefix='/api/v1')
+blueprint = Blueprint('api_v1', __name__, url_prefix='/api/v1')
 
 
-@api_v1_bp.route('/', methods=['GET'])
+@blueprint.route('/', methods=['GET'], strict_slashes=False)
 def index():
     """
     Index route for the API v1.

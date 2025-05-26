@@ -53,7 +53,7 @@ def create_app(test_config=None):
         return "Hello Flask"
 
     # register routes
-    app.register_blueprint(ROUTES.api_v1.api_v1_bp)
+    app.register_blueprint(ROUTES.api_v1.blueprint)
 
     return app
 
