@@ -22,4 +22,4 @@ def formatResponse(status: int, message: str, data: dict = None, errors: List[st
         "errors": errors if errors is not None else []
     })
 
-    return response
+    return response, status
